@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: bits
-          image: 755448775693.dkr.ecr.us-east-1.amazonaws.com/project
+          image: jeesap/bitsproj
           imagePullPolicy: Always
           ports:
             - containerPort: 80
