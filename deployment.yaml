@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: bits
-          image: jeesap/bitsproj
+          image: jeesap/bitsproject
           imagePullPolicy: Always
           ports:
             - containerPort: 80
