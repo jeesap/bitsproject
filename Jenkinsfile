@@ -51,7 +51,7 @@ pipeline {
     }
 }
 
-/*	     
+	     
 	          stage('Delete the existing deployment') {
                   steps {
                   withAWS(region:'ap-south-1',credentials:'aws') {
@@ -65,7 +65,7 @@ pipeline {
               }
          }
 	     
-*/	     
+	     
 
           stage('Deploy to AWS Kubernetes Cluster') {
                   steps {
