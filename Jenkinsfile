@@ -51,6 +51,19 @@ pipeline {
     }
 }
 
+	     
+	          stage('Delete the existing deployment') {
+                  steps {
+                  withAWS(region:'ap-south-1',credentials:'aws') {
+                  sh "aws eks --region ap-south-1 update-kubeconfig --name bits"
+                  sh "/usr/local/bin/kubectl delete deployment bits"
+                  sh "/usr/local/bin/kubectl get deployment"
+                  sh "/usr/local/bin/kubectl get pod -o wide"
+                  }
+              }
+         }
+	     
+	     
 
           stage('Deploy to AWS Kubernetes Cluster') {
                   steps {
